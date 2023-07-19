@@ -1,8 +1,12 @@
 
 
 export default function Button() {
+
   return (
-    <div>Button</div>
+
+    <button>Esto es un botón</button>
+
+    
   )
 
 

@@ -2,6 +2,6 @@
 
 export default function Navbar() {
   return (
-    <div>Navbar</div>
+    <div> Esto es la Navbar</div>
   )
 }
