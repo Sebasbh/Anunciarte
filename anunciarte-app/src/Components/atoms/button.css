@@ -1,16 +1,44 @@
-.whiteButton{
+button {
+    border-radius: 1rem;
+    width: 100%;
+    height: 3rem;
+    text-align: center;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .whiteButton {
     background-color: white;
-    height: 30%;
-    color:black;
-
-}
-
-
-
-.blueButton{
-
-}
-
-.yellowButton{
-
-}
+    color: #2C2E34;
+    font-weight: 600;
+  }
+  
+  .whiteButton:hover {
+    background-color: #3D3F45;
+    color: white;
+  }
+  
+  .blueButton {
+    background: #1D5AD5;
+    color: #FFF;
+  }
+  
+  .blueButton:hover {
+    background-color: #FEBC2A;
+    color: #000 ;
+  }
+  
+  .yellowButton {
+    background: #FEBC2A;
+    color: #000;
+  }
+  
+  .yellowButton:hover {
+    background-color: #1D5AD5;
+    color: #fff;
+  }
+  
