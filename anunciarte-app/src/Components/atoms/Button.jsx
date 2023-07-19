@@ -1,10 +1,13 @@
+import "./button.css"
 
-
-export default function Button() {
+export default function Button({style, text, arrow}) {
 
   return (
 
-    <button>Esto es un botón</button>
+    <button className={style}>
+        {text}
+        {arrow && <span className="arrow-icon">➔</span>}
+    </button>
 
     
   )

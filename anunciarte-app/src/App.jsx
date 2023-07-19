@@ -7,14 +7,19 @@ import Navbar from './Components/molecules/Navbar'
 
 function App() {
 
-    <div>
+    return(
 
-<Navbar />
+        <div>
 
-<RouterItem />
+        <Navbar />
+        
+        <RouterItem />
+        
+        
+            </div>
+    )
 
-
-    </div>
+   
    
     
     
