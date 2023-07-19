@@ -12,4 +12,10 @@ h1{
 
 }
 
+h1 .highlight {
+    background-color: #FEBC2A;
+    color: #1D5AD5;
+    padding: 0 0.3rem;
+  }
+
 
