@@ -1,32 +1,32 @@
-import { Products } from "../models/AllModels.js";
+import Product  from "../Models/ProductModel.js";
 
 // Methods for the CRUD of Products
 
 // Display all products
-export const getAllproducts  = async (req, res) => {
+export const getAllProducts = async (req, res) => {
    try {
-      const Products = await Products.find();
-      res.status(200).json(Products);
+     const products = await Product.find();
+     res.status(200).json(products);
    } catch (error) {
-      res.json({ message: error.message });
+     res.json({ message: error.message });
    }
-};
+ }
 
 // Display a product
-export const getproducts = async (req, res) => {
+export const getProduct = async (req, res) => {
    try {
-      const id = req.params.id;
-      const Products = await Products.findById(id);
-      res.status(200).json(Products);
+     const id = req.params.id;
+     const product = await Product.findById(id);
+     res.status(200).json(product);
    } catch (error) {
-      res.json({ message: error.message });
+     res.json({ message: error.message });
    }
-};
+ };
 
 // Create a product
-export const createProducts = async (req, res) => {
+export const createProduct = async (req, res) => {
    try {
-      await Products.create(req.body);
+      await Product.create(req.body);
       res.status(200).json({
          message: "Order created correctly!"
       });
@@ -36,10 +36,10 @@ export const createProducts = async (req, res) => {
 };
 
 // Update a product
-export const updateProducts = async (req, res) => {
+export const updateProduct = async (req, res) => {
    try {
       const id = req.params.id;
-      await Products.updateOne({ _id: id }, req.body);
+      await Product.updateOne({ _id: id }, req.body);
       res.status(200).json({
          message: "Product updated correctly!"
       });
@@ -49,10 +49,10 @@ export const updateProducts = async (req, res) => {
 };
 
 // Delete a product
-export const deleteProducts = async (req, res) => {
+export const deleteProduct = async (req, res) => {
    try {
       const id = req.params.id;
-      await Products.deleteOne({ _id: id });
+      await Product.deleteOne({ _id: id });
       res.status(200).json({
          message: "Product deleted correctly!"
       });
@@ -60,3 +60,6 @@ export const deleteProducts = async (req, res) => {
       res.json({ message: error.message });
    }
 };
+
+
+
