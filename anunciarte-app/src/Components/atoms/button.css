@@ -1,4 +1,5 @@
 button {
+    border: none;
     border-radius: 1rem;
     width: 100%;
     height: 3rem;
@@ -9,6 +10,12 @@ button {
     line-height: normal;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 3%;
+    outline: none; 
+  }
+  
+  button:hover {
+    opacity: 0.9; 
   }
   
   .whiteButton {
@@ -18,8 +25,8 @@ button {
   }
   
   .whiteButton:hover {
-    background-color: #3D3F45;
-    color: white;
+    background-color: #FEBC2A;
+    color: #1D5AD5;
   }
   
   .blueButton {
@@ -42,3 +49,6 @@ button {
     color: #fff;
   }
   
+  .arrow-icon {
+    margin-left: 5%; 
+  }
