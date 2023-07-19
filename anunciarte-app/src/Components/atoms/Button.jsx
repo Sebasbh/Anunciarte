@@ -1,8 +1,15 @@
+import "./button.css"
 
+export default function Button({style, text, arrow}) {
 
-export default function Button() {
   return (
-    <div>Button</div>
+
+    <button className={style}>
+        {text}
+        {arrow && <span className="arrow-icon">➔</span>}
+    </button>
+
+    
   )
 
 
