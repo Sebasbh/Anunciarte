@@ -1,0 +1,31 @@
+.ProductDetail {
+    height: 100vh;
+    background: #E89ABF;
+    width: 100%;
+}
+
+.homeButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+    width: 25%;
+}
+
+.BlueButton {
+    background-color: blue;
+    width: 20%;
+}
+
+.YellowButton {
+    background-color: yellow;
+    width: 20%;
+}
+
+.items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+    width: 15%;
+}
