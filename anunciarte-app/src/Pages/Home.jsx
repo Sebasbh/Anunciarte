@@ -1,7 +1,6 @@
 import Button from "../Components/atoms/Button";
 import "./home.css";
 import HomeImage from "./../assets/home_img.png";
-import CardProduct from "../Components/atoms/CardProduct";
 
 export default function Home() {
   return (
@@ -21,7 +20,6 @@ export default function Home() {
             <Button style="whiteButton" text="Buy" arrow={true} />
             <Button style="whiteButton" text="Sell" arrow={true} />
           </div>
-          
         </div>
       </div>
     </div>
