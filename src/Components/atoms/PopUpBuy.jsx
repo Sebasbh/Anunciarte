@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button, Modal, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
-
+import Image from '../../assets/test.png'
 const CustomButton = styled(Button)`
   background-color: #FBB936;
   border: none;
@@ -13,7 +13,7 @@ const CustomButton = styled(Button)`
   cursor: pointer;
   text-transform: none;
   color: white;
-  margin: 1em 0 0 0;
+  margin: 1em 0 0 1em;
   &:hover{
     background-color: #FBB936;
     transform: translate(1px, 1px);
@@ -22,10 +22,16 @@ const CustomButton = styled(Button)`
 
 const CustomTypography = styled(Typography)`
   color: white;
-  margin: 1em 0;
+  margin: 0 0 1em 0;
+  text-align: left;
 `;
-
-const CartModal = ({ image, name, author, category, price }) => {
+const CustomButtonMain = styled(Button)`
+  cursor: pointer;
+  color: white;
+  font-size: 1em;
+  margin: 0;
+`;
+const CartModal = ({ title, author, category, price }) => {
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => setOpen(true);
@@ -34,8 +40,7 @@ const CartModal = ({ image, name, author, category, price }) => {
   const handleSave = () => {
     const cartData = {
       id: JSON.parse(localStorage.getItem('cartData'))?.length || 0,
-      image: image,
-      name: name,
+      title: title,
       author: author,
       category: category,
       price: price
@@ -58,27 +63,40 @@ const CartModal = ({ image, name, author, category, price }) => {
             top: '50%',
             left: '50%',
             transform: 'translate(-50%, -50%)',
-            width: 400,
+            width: 600,
             backgroundColor: '#FBB936',
             boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.25)',
-            padding: '2em',
+            padding: '1em 2em 2em 2em',
             textAlign: 'center',
             borderRadius: '1em',
           }}
         >
-          <CustomTypography variant="h6" component="h2" gutterBottom>
+          <div style={{display: 'flex', width: '100%'}}>
+            <CustomButtonMain onClick={handleClose} style={{padding: '0', justifyContent: 'flex-end'}}>X</CustomButtonMain>
+          </div>
+          <CustomTypography variant="h6" component="h2" gutterBottom style={{textAlign: 'center'}}>
             Añadir al carrito
           </CustomTypography>
-          <div>
-            <img src={image} alt="Content" style={{ width: '100%', height: 'auto' }} />
+          <div style={{display: 'flex', textAlign: 'left'}}>
+            <div style={{
+            width: '300px', 
+            height: '20em', 
+            overflow: 'hidden',
+            marginRight: '2em'
+          }}>
+            <img src={Image} alt="Arte" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
           </div>
-          <CustomTypography variant="body1">{name}</CustomTypography>
-          <CustomTypography variant="body1">{author}</CustomTypography>
+          <div>
+            <CustomTypography variant="body1" style={{fontSize: '1.4em' }}>{title}</CustomTypography>
           <CustomTypography variant="body1">{category}</CustomTypography>
-          <CustomTypography variant="body1">${price}</CustomTypography>
+          <CustomTypography variant="body1">By: {author}</CustomTypography>
+          <CustomTypography variant="body1" style={{fontSize: '1.4em' }}>${price}</CustomTypography>
           <CustomButton onClick={handleSave} style={{
-            backgroundColor: '#1D5AD5',
+            backgroundColor: '#1D5AD5', marginLeft: '0'
           }}>Añadir</CustomButton>
+          </div>
+          </div>
+          
         </div>
       </Modal>
     </div>

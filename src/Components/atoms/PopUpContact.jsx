@@ -27,6 +27,12 @@ const CustomTextField = styled(TextField)`
 const CustomTextarea = styled(TextField)`
   background-color: white;
 `;
+const CustomButtonMain = styled(Button)`
+  cursor: pointer;
+  color: white;
+  font-size: 1em;
+  margin: 0;
+`;
 
 const ContactModal = () => {
   const [open, setOpen] = useState(false);
@@ -91,15 +97,18 @@ const ContactModal = () => {
             width: 400,
             backgroundColor: '#1D5AD5',
             boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.25)',
-            padding: '2em',
+            padding: '1em 2em 2em 2em',
             textAlign: 'center',
             borderRadius: '1em',
             color: 'white',
           }}
         >
-          <Typography variant="h6" component="h2" gutterBottom>
+          <div style={{display: 'flex', width: '100%'}}>
+            <CustomButtonMain onClick={handleClose} style={{padding: '0', justifyContent: 'flex-end'}}>X</CustomButtonMain>
+          </div>
+           <Typography variant="h6" component="h2" gutterBottom style={{marginBottom: '0'}}>
             Formulario de contacto
-          </Typography>
+            </Typography>
           <form onSubmit={handleSubmit}>
             <CustomTextField
               label="Nombre"
