@@ -1,3 +1,5 @@
+<img src="./anunciarte-app/src/assets/anunciarteLogo02.png" alt="Logo" />
+
 # Anunciarte
 
 Sebastian Riggio    (sebastian-riggio)
@@ -24,9 +26,13 @@ Almacenamiento y consulta de datos en MongoDB.
 
 Durante este sprint, hemos estado concentrados en implementar las funcionalidades principales y mejorar la experiencia del usuario en nuestra plataforma de Market Place de Arte. A pesar de la brevedad del sprint, hemos logrado grandes avances gracias a la dedicación y colaboración del equipo.
 
-Requisitos previos
+# Requisitos previos
 Asegúrate de tener instalado lo siguiente antes de ejecutar la aplicación:
 
 Node.js y npm: https://nodejs.org
 MongoDB: https://www.mongodb.com
+
+# Organización del equipo
+
+Jira: https://danijira.atlassian.net/jira/software/projects/AN/boards/3
 
