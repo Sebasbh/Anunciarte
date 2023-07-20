@@ -50,7 +50,7 @@ const CartModal = ({ image, name, author, category, price }) => {
 
   return (
     <div>
-      <CustomButton onClick={handleOpen}>Buy</CustomButton>
+      <CustomButton onClick={handleOpen}>Comprar</CustomButton>
       <Modal open={open} onClose={handleClose}>
         <div
           style={{
@@ -67,7 +67,7 @@ const CartModal = ({ image, name, author, category, price }) => {
           }}
         >
           <CustomTypography variant="h6" component="h2" gutterBottom>
-            Add to cart
+            Añadir al carrito
           </CustomTypography>
           <div>
             <img src={image} alt="Content" style={{ width: '100%', height: 'auto' }} />
@@ -78,7 +78,7 @@ const CartModal = ({ image, name, author, category, price }) => {
           <CustomTypography variant="body1">${price}</CustomTypography>
           <CustomButton onClick={handleSave} style={{
             backgroundColor: '#1D5AD5',
-          }}>Add</CustomButton>
+          }}>Añadir</CustomButton>
         </div>
       </Modal>
     </div>
