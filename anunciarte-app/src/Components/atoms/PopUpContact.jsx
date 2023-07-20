@@ -15,7 +15,6 @@ const CustomButton = styled(Button)`
   color: white;
   margin: 1em 0 0 0;
   &:hover{
-    background-color: #FCC753;
     transform: translate(1px, 1px);  }
 `;
 
