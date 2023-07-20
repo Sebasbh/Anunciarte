@@ -1,4 +1,4 @@
-import ContactModal from "../Components/atoms/PopUpContact";
+
 import CartModal from "../Components/atoms/PopUpBuy";
 import "./productDetail.css";
 import illustration from "../assets/pageIllustration.png"
@@ -14,6 +14,21 @@ import ProductList from "../Components/atoms/ProductList";
 
 export default function ProductDetail() {
   const productId = 2;
+  const properties = {
+    title: true,
+    author: true,
+    price: true,
+    description: true,
+    category: true,
+    year: true,
+    size: true,
+    readyToHang: true,
+    frame: true,
+    signed: true,
+    materials: true,
+    shipping: true,
+  };
+  
   return (
    
     <div className="ProductDetail">
@@ -38,14 +53,12 @@ export default function ProductDetail() {
 
        
             <div className="ButtonsProductsDetail">
-              <ContactModal />
+              
               <CartModal/>
             </div>
             <h3>DETAILS</h3>
-            
-            
-    
-            COMPONENTE CON INFO ADICIONAL E INSTRUCCIONES
+            <ProductList show={properties} id={productId} style={"product-container"} />
+          
           </div>
 
           

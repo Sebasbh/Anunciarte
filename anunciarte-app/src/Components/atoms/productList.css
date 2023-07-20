@@ -52,13 +52,29 @@
 
 /* SOLO PARA TEXTO */
 
+.product-container{
+  
+  padding: 5%;
+  margin: 5%;
+  width: 20rem;
+  height: max-content;
+
+
+  
+}
+
 .product-container-white {
+  
+  background-color: #f9f9f9;
   border: 1px solid #ccc;
   padding: 5%;
   margin: 5%;
   width: 20rem;
   height: max-content;
-  background-color: #f9f9f9;
+
   border-radius: 4px;
+
 }
+
+
   
