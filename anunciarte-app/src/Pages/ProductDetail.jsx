@@ -39,7 +39,7 @@ export default function ProductDetail() {
        
             <div className="ButtonsProductsDetail">
               <ContactModal />
-              <CartModal/>
+            <CartModal author={"Nombre Apellido"} title={"Nombre de la pintura"} category="Modernismo" price={"900"} />
             </div>
             <h3>DETAILS</h3>
             
