@@ -9,7 +9,8 @@
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test": "jest",
-    "start": "\"json-server --watch data.json --port 3001\""
+    "start": "\"json-server --watch data.json --port 3001\"",
+    "vitest": "vitest --ui"
   },
   "jest": {
     "transform": {
