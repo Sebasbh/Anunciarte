@@ -7,7 +7,7 @@
     align-items: center;
 }
 
-.homeButtons{
+.homeButtonsDetail{
     display: flex;
     flex-direction: row;
     justify-content: center;
