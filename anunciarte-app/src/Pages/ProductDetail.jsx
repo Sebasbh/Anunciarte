@@ -55,9 +55,10 @@ export default function ProductDetail() {
           <ProductList show={{ title: true, price: true, description:true }} id={productId} style={"product-container-white"} />
 
        
-            
-              <ContactModal />
+            <div className="buttonsContainerProduct">
+            <ContactModal />
             <CartModal author={"Nombre Apellido"} title={"Nombre de la pintura"} category="Modernismo" price={"900"} />
+            </div>
            
             <h3>DETAILS</h3>
             <ProductList show={properties} id={productId} style={"product-container"} />
