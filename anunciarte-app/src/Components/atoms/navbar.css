@@ -1,0 +1,45 @@
+.navbar {
+    background-color: #1D5AD5;
+    padding: 10px;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    
+  }
+  
+  
+  .logo {
+    width: 2.5%; 
+    height: auto;
+    margin-right: 1rem; 
+   
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    margin-right: 5rem;
+  }
+  
+  .menu li {
+    padding: 8px 15px;
+  }
+  
+  .menu li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .menu li a:hover {
+    color: #FED200;
+  }
+  
+  @media screen and (max-width: 400px) {
+    .navbar {
+      display: none;
+    }
+  }
+  
