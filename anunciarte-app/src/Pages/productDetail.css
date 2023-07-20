@@ -2,30 +2,42 @@
     height: 100vh;
     background: #E89ABF;
     width: 100%;
+    height: 100vh;
 }
 
-.homeButtons{
+.ButtonsProductsDetail{
     display: flex;
     flex-direction: row;
+   
     justify-content: center;
+    align-items:center ;
     gap: 5%;
-    width: 25%;
-}
-
-.BlueButton {
-    background-color: blue;
     width: 20%;
-}
-
-.YellowButton {
-    background-color: yellow;
-    width: 20%;
+    align-self: center; 
 }
 
 .items {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     gap: 5%;
     width: 15%;
 }
+
+@media screen and (max-width: 400px) {
+    .ButtonsProductsDetail {
+    flex-wrap: wrap;
+      width: 80%; 
+      justify-content: center;  
+      align-items: center;
+    }
+  }
+  
+  @media screen and (min-width: 401px) and (max-width: 1024px) {
+    .ButtonsProductsDetail {
+        flex-wrap: wrap;
+      width: 60%; 
+    }
+  }
+  
