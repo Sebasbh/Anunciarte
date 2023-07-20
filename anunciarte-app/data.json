@@ -1,0 +1,18 @@
+{
+    "products": [
+        {
+            "title": "title",
+            "author": "Name Lastname",
+            "price": 500,
+            "description": "description",
+            "category": "category",
+            "year": 2020,
+            "size": "large",
+            "readyToHang": "Yes",
+            "frame": "No",
+            "signed": "Yes",
+            "materials": "materials",
+            "shipping": "Yes"
+        }
+    ]
+}

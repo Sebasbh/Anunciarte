@@ -1,8 +1,7 @@
 import Button from "../Components/atoms/Button";
 import "./home.css";
 import HomeImage from "./../assets/home_img.png";
-import Logo from './../assets/anunciarteLogo02.png';
-
+import Logo from "./../assets/anunciarteLogo02.png";
 
 export default function Home() {
   return (
@@ -17,14 +16,17 @@ export default function Home() {
         <div className="sloganContainer">
           <div>
             <h1>
-              the place of <span className="highlight">ART</span>
+              the place of   <span className="highlight">ART</span>
             </h1>
           </div>
           <div className="homeButtons">
-            <Button style="whiteButton" text="Buy" arrow={true} />
-            <Button style="whiteButton" text="Sell" arrow={true} />
+            <a href="/products">
+              <Button style="whiteButton" text="Buy" arrow={true} />
+            </a>
+            <a href="/error">
+              <Button style="whiteButton" text="Sell" arrow={true} />
+            </a>
           </div>
-          
         </div>
       </div>
     </div>
