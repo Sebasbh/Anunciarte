@@ -30,10 +30,11 @@ export default function ProductDetail() {
         </div>
         <div className="mainContainerProduct">
           <div className="galleryContainer">
-            <ProductList show={{ title: true, price: true, description:true }} id={productId} style={"product-container-white"} />
-
+            
           </div>
           <div className="infoContainer">
+          <ProductList show={{ title: true, price: true, description:true }} id={productId} style={"product-container-white"} />
+
        
             <div className="ButtonsProductsDetail">
               <Button style="blueButton" text="Contact" arrow={false} />
