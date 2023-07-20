@@ -71,8 +71,8 @@ const CartModal = ({ title, author, category, price }) => {
             borderRadius: '1em',
           }}
         >
-          <div style={{display: 'flex', width: '100%', justifyContent: 'flex-end'}}>
-            <CustomButtonMain onClick={handleClose} style={{padding: '0'}}>X</CustomButtonMain>
+          <div style={{display: 'flex', width: '100%'}}>
+            <CustomButtonMain onClick={handleClose} style={{padding: '0', justifyContent: 'flex-end'}}>X</CustomButtonMain>
           </div>
           <CustomTypography variant="h6" component="h2" gutterBottom style={{textAlign: 'center'}}>
             Añadir al carrito

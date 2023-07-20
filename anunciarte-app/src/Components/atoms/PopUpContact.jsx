@@ -103,8 +103,8 @@ const ContactModal = () => {
             color: 'white',
           }}
         >
-          <div style={{display: 'flex', width: '100%', justifyContent: 'flex-end'}}>
-            <CustomButtonMain onClick={handleClose} style={{padding: '0'}}>X</CustomButtonMain>
+          <div style={{display: 'flex', width: '100%'}}>
+            <CustomButtonMain onClick={handleClose} style={{padding: '0', justifyContent: 'flex-end'}}>X</CustomButtonMain>
           </div>
            <Typography variant="h6" component="h2" gutterBottom style={{marginBottom: '0'}}>
             Formulario de contacto
