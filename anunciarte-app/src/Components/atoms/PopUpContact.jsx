@@ -80,7 +80,7 @@ const ContactModal = () => {
 };
   return (
     <div>
-      <CustomButton onClick={handleOpen}>Contact</CustomButton>
+      <CustomButton onClick={handleOpen}>Contactar</CustomButton>
       <Modal open={open} onClose={handleClose}>
         <div
           style={{
@@ -98,11 +98,11 @@ const ContactModal = () => {
           }}
         >
           <Typography variant="h6" component="h2" gutterBottom>
-            Contact Form
+            Formulario de contacto
           </Typography>
           <form onSubmit={handleSubmit}>
             <CustomTextField
-              label="Name"
+              label="Nombre"
               variant="filled"
               fullWidth
               margin="normal"
@@ -122,7 +122,7 @@ const ContactModal = () => {
               required
             />
             <CustomTextarea
-              label="Message"
+              label="Mensaje"
               multiline
               rows={4}
               variant="filled"
@@ -138,7 +138,7 @@ const ContactModal = () => {
             backgroundColor: '#FEBC2A',
                 color: 'black',
           }}>
-              Send
+              Enviar
             </CustomButton>
           </form>
         </div>
