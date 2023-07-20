@@ -2,6 +2,9 @@ import Button from "../Components/atoms/Button";
 import "./home.css";
 import HomeImage from "./../assets/home_img.png";
 import Logo from './../assets/anunciarteLogo02.png';
+import Footer from '../Components/atoms/Footer'
+import PopUpBuy from '../Components/atoms/PopUpBuy'
+import PopUpContact from '../Components/atoms/PopUpContact'
 
 
 export default function Home() {
@@ -24,7 +27,7 @@ export default function Home() {
             <Button style="whiteButton" text="Buy" arrow={true} />
             <Button style="whiteButton" text="Sell" arrow={true} />
           </div>
-          
+          <PopUpContact />
         </div>
       </div>
     </div>
