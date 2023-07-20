@@ -1,4 +1,4 @@
-import Product  from "../Models/ProductModel.js";
+import Product  from "../models/ProductModel.js";
 
 // Methods for the CRUD of Products
 

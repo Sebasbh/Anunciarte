@@ -1,5 +1,5 @@
 import { getAllProducts, getProduct, createProduct, updateProduct, deleteProduct, getFilteredProducts } from "../Controllers/ProductControllers.js";
-import Product from "../Models/ProductModel.js";
+import Product from "../models/ProductModel.js";
 
 jest.mock('../Models/ProductModel.js');
 
