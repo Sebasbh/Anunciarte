@@ -1,0 +1,9 @@
+.Favourites {
+    height: 100vh;
+    background: rgb(255, 162, 0);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
