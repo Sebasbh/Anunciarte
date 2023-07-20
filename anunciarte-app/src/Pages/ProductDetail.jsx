@@ -1,4 +1,5 @@
-import Button from "../Components/atoms/Button";
+import ContactModal from "../Components/atoms/PopUpContact";
+import CartModal from "../Components/atoms/PopUpBuy";
 import "./productDetail.css";
 
 export default function ProductDetail() {
@@ -13,8 +14,8 @@ export default function ProductDetail() {
         <div>image</div>
         <div>dates product</div>
         <div className="homeButtonsDetail">
-            <Button style="BlueButton" text="Contact" arrow={false} />
-            <Button style="YellowButton" text="Buy" arrow={false}/>
+            <ContactModal />
+            <CartModal />
         </div>
         <div>footer</div>
     </div>

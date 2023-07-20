@@ -10,11 +10,13 @@ const CustomButton = styled(Button)`
   padding: 10px 30px;
   font-size: 1em;
   font-weight: 400;
+   width: 7em;
   cursor: pointer;
   text-transform: none;
   color: white;
   margin: 1em 0 0 0;
   &:hover{
+    background-color: #1D5AD5;
     transform: translate(1px, 1px);  }
 `;
 
