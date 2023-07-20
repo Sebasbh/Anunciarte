@@ -3,7 +3,7 @@ import Home from '../../src/Pages/Home';
 import Product from '../../src/Pages/Product';
 import ProductDetail from '../../src/Pages/ProductDetail';
 import Error from '../../src/Pages/Error';
-import Favorites from '../../src/Pages/Favorites';
+import Favourites from '../../src/Pages/Favourites';
 
 const RouterItem = () => {
     return(
@@ -13,7 +13,7 @@ const RouterItem = () => {
                 <Route path="/product" element={<Product/>}></Route>
                 <Route path="/productDetail" element={<ProductDetail/>}></Route>
                 <Route path="/Error" element={<Error/>}></Route>
-                <Route path="/Favorites" element={<Favorites/>}></Route>
+                <Route path="/Favourites" element={<Favourites/>}></Route>
             </Routes>
         </BrowserRouter>
     )

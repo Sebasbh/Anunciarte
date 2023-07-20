@@ -1,18 +1,24 @@
 import illustration from "../assets/pageIllustration.png"
 import Navbar from "../Components/molecules/MobileNavbar";
 import Footer from "../Components/atoms/Footer";
+import CardProduct from "../Components/atoms/CardProduct";
+import "./favourites.css";
 
 
 export default function Favourites() {
   return (
    
   <div className="Favourites">
-        <Navbar />
+        
         <div className="illustrationContainer">
           <img src={illustration} alt="" />
         </div>
         <div>
-          <div className="GaleryFavorites"></div>
+          <h2>FAVOURITES</h2>
+        </div>
+        <div>
+        <div className="GaleryFavourites"></div>
+        <CardProduct/>
         </div>
         <Footer />
   </div>
