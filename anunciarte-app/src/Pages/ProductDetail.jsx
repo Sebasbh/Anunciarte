@@ -1,4 +1,5 @@
-import Button from "../Components/atoms/Button";
+import ContactModal from "../Components/atoms/PopUpContact";
+import CartModal from "../Components/atoms/PopUpBuy";
 import "./productDetail.css";
 import illustration from "../assets/pageIllustration.png"
 import MobileNavbar from "./../Components/molecules/MobileNavbar"
@@ -36,8 +37,8 @@ export default function ProductDetail() {
           <div className="infoContainer">
        
             <div className="ButtonsProductsDetail">
-              <Button style="blueButton" text="Contact" arrow={false} />
-              <Button style="yellowButton" text="Buy" arrow={false}/>
+              <ContactModal />
+              <CartModal/>
             </div>
             <h3>DETAILS</h3>
             
