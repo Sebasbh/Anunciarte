@@ -4,7 +4,7 @@ function ProductList() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:8000/product')
+    fetch('http://localhost:3001/products')
       .then(response => response.json())
       .then(data => setProducts(data))
       .catch(error => console.log(error));
@@ -12,14 +12,14 @@ function ProductList() {
 
   return (
     <div>
-      {products.map(product => (
-        <div key={product.title}>
+      {products.map((product, index) => (
+        <div key={index}>
           <h2>{product.title}</h2>
           <p>Price: ${product.price}</p>
           <img src={product.image} alt={product.title} />
           <p>{product.description}</p>
           <p>Email: {product.email}</p>
-          <p>Categories: {product.categories.join(', ')}</p>
+          <p>Categories: {product.category}</p>
           <p>Year: {product.year}</p>
           <p>Size: {product.size}</p>
           <p>Ready to Hang: {product.readyToHang ? 'Yes' : 'No'}</p>
