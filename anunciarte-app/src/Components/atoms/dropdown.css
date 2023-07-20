@@ -1,0 +1,39 @@
+.dropdown-menu {
+
+  position: absolute;
+  background-color: #febc2a;
+  border-radius: 5px;
+  padding: 2%;
+  list-style: none;
+  z-index: 1;
+  width: 100%;
+
+  
+
+  
+}
+
+.dropdown-menu li {
+  padding: 8px;
+  color: #333;
+  cursor: pointer;
+}
+
+
+
+
+
+.dropdown-menu {
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

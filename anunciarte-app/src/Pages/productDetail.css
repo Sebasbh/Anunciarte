@@ -2,30 +2,103 @@
     height: 100vh;
     background: #E89ABF;
     width: 100%;
+    height: 100vh;
 }
 
-.homeButtonsDetail{
+.ButtonsProductsDetail{
     display: flex;
     flex-direction: row;
+   
     justify-content: center;
+    align-items:center ;
     gap: 5%;
-    width: 25%;
+    width: 20%;
+    align-self: center; 
 }
 
-.BlueButton {
-    background-color: blue;
-    width: 20%;
+.mainContainerProduct{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 5%
+}
+.buttonsContainerProduct{
+  width: 100%;
+  display: flex;
+  gap: 5%;
+}
+.galleryContainer img {
+  max-width: 100%;
+  height: auto;
 }
 
-.YellowButton {
-    background-color: yellow;
-    width: 20%;
+.infoContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .items {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     gap: 5%;
     width: 15%;
 }
+.mobileNavbarContainer{
+  display: none;
+}
+.illustrationContainer {
+  
+  display: none; 
+}
+
+.mobileOnly {
+ 
+  display: none; 
+}
+
+@media screen and (max-width: 400px) {
+    .ButtonsProductsDetail {
+   
+      width: 60%; 
+      justify-content: center;  
+      align-items: center;
+    }
+
+    .illustrationContainer {
+      
+      display: block;
+    }
+  
+    .mobileOnly {
+     
+      display: block; 
+    }
+  
+    
+
+  }
+  
+  
+  @media screen and (min-width: 401px) and (max-width: 1024px) {
+    .ButtonsProductsDetail {
+        
+      width: 30%; 
+    }
+    .illustrationContainer {
+      
+      display: block;
+    }
+  
+    .mobileOnly {
+     
+      display: block; 
+    }
+  
+  
+  }
+

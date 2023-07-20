@@ -1,0 +1,19 @@
+.navbarContainer{
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.navbarContainer img{
+    max-width: 13%;
+    padding: 2%;
+    height: auto;
+    margin: 2%;
+}
+
+.burgerIcon {
+    font-size: 2.5rem; 
+    margin-right: 1.5rem; 
+}

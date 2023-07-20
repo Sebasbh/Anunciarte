@@ -1,27 +1,85 @@
-import Button from "../Components/atoms/Button";
+
+import CartModal from "../Components/atoms/PopUpBuy";
 import "./productDetail.css";
+import illustration from "../assets/pageIllustration.png"
+import MobileNavbar from "./../Components/molecules/MobileNavbar"
+import Navbar from "./../Components/atoms/Navbar"
+import ProductList from "../Components/atoms/ProductList";
+import SpecialInfoCard from "../Components/atoms/SpecialInfoCard";
+import ContactModal from "../Components/atoms/PopUpContact"
+
+
+
+
+ 
+
+
+
 
 export default function ProductDetail() {
+  const productId = 2;
+  const properties = {
+    title: true,
+    price: true,
+    description: true,
+    category: true,
+    year: true,
+    size: true,
+    readyToHang: true,
+    frame: true,
+    signed: true,
+    materials: true,
+    shipping: true,
+  };
+  
   return (
    
     <div className="ProductDetail">
-        <div>LOGO</div>
-        <div>ilustración</div>
-        <div>
-          <h1>type product</h1>
+      <Navbar />
+      <div className="mobileOnly">
+        <MobileNavbar />
+      </div>
+      
+      
+    
+    
+        
+        <div className="illustrationContainer">
+          <img src={illustration} alt="" />
         </div>
-        <div>image</div>
-        <div>dates product</div>
-        <div className="homeButtonsDetail">
-            <Button style="BlueButton" text="Contact" arrow={false} />
-            <Button style="YellowButton" text="Buy" arrow={false}/>
-        </div>
-        <div className="items">
-          <div>item1</div>
-          <div>item2</div>
-          <div>item3</div>
+        <div className="mainContainerProduct">
+          <div className="galleryContainer">
+            
+          </div>
+          <div className="infoContainer">
+          <ProductList show={{ title: true, price: true, description:true }} id={productId} style={"product-container-white"} />
+
+       
+            <div className="buttonsContainerProduct">
+            <ContactModal />
+            <CartModal author={"Nombre Apellido"} title={"Nombre de la pintura"} category="Modernismo" price={"900"} />
+            </div>
+           
+            <h3>DETAILS</h3>
+            <ProductList show={properties} id={productId} style={"product-container"} />
+            <SpecialInfoCard artwork="Original artwork" 
+            stock="Only 1 available. Get it before it's gone" 
+            returns="Free & easy 14 days returns" 
+            pay="Pay in instalments as low as £168,00/month" 
+            shipping="Worldwide safe shipping" 
+            arrival="Ships from United Kingdom by Wednesday, 26 July 2023" />
+
+            
+          
+          
+          </div>
+
+          
+        
         </div>
     </div>
 
   )
 }
+
+  
