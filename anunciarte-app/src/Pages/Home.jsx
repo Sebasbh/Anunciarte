@@ -7,7 +7,9 @@ import Logo from './../assets/anunciarteLogo02.png';
 export default function Home() {
   return (
     <div className="home">
-      <div>{Logo}</div>
+      <div className="logoContainer">
+        <img src={Logo} alt="anunciArte" />
+      </div>
       <div className="homeMainContainer">
         <div>
           <img src={HomeImage} alt="AnunciArte" />
