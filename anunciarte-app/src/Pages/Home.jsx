@@ -1,12 +1,12 @@
 import Button from "../Components/atoms/Button";
 import "./home.css";
 import HomeImage from "./../assets/home_img.png";
-import CardProduct from "../Components/atoms/CardProduct";
+import Logo from "./../assets/anunciarteLogo02.png"
 
 export default function Home() {
   return (
     <div className="home">
-      <div>LOGO</div>
+      <div>{Logo}</div>
       <div className="homeMainContainer">
         <div>
           <img src={HomeImage} alt="AnunciArte" />

@@ -12,7 +12,7 @@ export default function ProductDetail() {
         </div>
         <div>image</div>
         <div>dates product</div>
-        <div className="homeButtons">
+        <div className="homeButtonsDetail">
             <Button style="BlueButton" text="Contact" arrow={false} />
             <Button style="YellowButton" text="Buy" arrow={false}/>
         </div>
