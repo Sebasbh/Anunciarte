@@ -21,7 +21,7 @@ export default function Home() {
             <Button style="whiteButton" text="Buy" arrow={true} />
             <Button style="whiteButton" text="Sell" arrow={true} />
           </div>
-          <CardProduct />
+          
         </div>
       </div>
     </div>
