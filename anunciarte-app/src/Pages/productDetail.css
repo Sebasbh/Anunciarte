@@ -21,6 +21,16 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  gap: 5%
+}
+.buttonsContainerProduct{
+  width: 100%;
+  display: flex;
+  gap: 5%;
+}
+.galleryContainer img {
+  max-width: 100%;
+  height: auto;
 }
 
 .infoContainer{
