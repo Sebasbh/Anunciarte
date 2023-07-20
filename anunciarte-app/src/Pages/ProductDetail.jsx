@@ -5,7 +5,7 @@ export default function ProductDetail() {
   return (
    
     <div className="ProductDetail">
-        <div>LOGO</div>
+        <div>Logo</div>
         <div>ilustración</div>
         <div>
           <h1>type product</h1>
@@ -16,11 +16,7 @@ export default function ProductDetail() {
             <Button style="BlueButton" text="Contact" arrow={false} />
             <Button style="YellowButton" text="Buy" arrow={false}/>
         </div>
-        <div className="items">
-          <div>item1</div>
-          <div>item2</div>
-          <div>item3</div>
-        </div>
+        <div>footer</div>
     </div>
 
   )

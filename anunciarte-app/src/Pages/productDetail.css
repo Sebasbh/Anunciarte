@@ -2,6 +2,9 @@
     height: 100vh;
     background: #E89ABF;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .homeButtons{
@@ -26,6 +29,6 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     gap: 5%;
-    width: 15%;
 }
