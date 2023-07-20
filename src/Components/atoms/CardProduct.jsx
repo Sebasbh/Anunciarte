@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
-function ProductList() {
+
+function ProductList(show) {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -10,15 +11,26 @@ function ProductList() {
       .catch(error => console.log(error));
   }, []);
 
+  // useEffect(() => {
+  //   fetch('../../../data.json')
+  //     .then(response => response.json())
+  //     .then(data => setProducts(data))
+  //     .catch(error => console.log(error));
+  // }, []);
+
+  // useEffect (()=>{
+  //   setProducts(productsData.products);
+  // }, [])
+
   return (
     <div>
       {products.map((product, index) => (
         <div key={index}>
-          <h2>{product.title}</h2>
-          <p>Price: ${product.price}</p>
-          <img src={product.image} alt={product.title} />
-          <p>{product.description}</p>
-          <p>Email: {product.email}</p>
+          {show.title && <h2>{product.title}</h2>}
+          {show.price && <p>Price: ${product.price}</p>}
+          <img src={show.image} alt={product.title} />
+          {show.description && <p>{product.description}</p>}
+          {show.email && <p>Email: {product.email}</p>}
           <p>Categories: {product.category}</p>
           <p>Year: {product.year}</p>
           <p>Size: {product.size}</p>

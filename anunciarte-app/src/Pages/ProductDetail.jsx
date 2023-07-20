@@ -4,6 +4,7 @@ import "./productDetail.css";
 import illustration from "../assets/pageIllustration.png"
 import MobileNavbar from "./../Components/molecules/MobileNavbar"
 import Navbar from "./../Components/atoms/Navbar"
+// import ProductList from "../Components/atoms/ProductList";
 
 
 
@@ -30,10 +31,10 @@ export default function ProductDetail() {
 
           </div>
           <div className="infoContainer">
-            componente con autor, país y precio
-          <div className="ButtonsProductsDetail">
-            <ContactModal />
-            <CartModal />
+          {/* <ProductList title={true} price={true} /> */}
+            <div className="ButtonsProductsDetail">
+              <Button style="blueButton" text="Contact" arrow={false} />
+              <Button style="yellowButton" text="Buy" arrow={false}/>
             </div>
             <h3>DETAILS</h3>
             
