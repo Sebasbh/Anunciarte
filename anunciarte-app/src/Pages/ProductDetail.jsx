@@ -1,12 +1,13 @@
 
-// import CartModal from "../Components/atoms/PopUpBuy";
+import CartModal from "../Components/atoms/PopUpBuy";
 import "./productDetail.css";
 import illustration from "../assets/pageIllustration.png"
 import MobileNavbar from "./../Components/molecules/MobileNavbar"
 import Navbar from "./../Components/atoms/Navbar"
 import ProductList from "../Components/atoms/ProductList";
 import SpecialInfoCard from "../Components/atoms/SpecialInfoCard";
-import Button from "../Components/atoms/Button"
+import ContactModal from "../Components/atoms/PopUpContact"
+
 
 
 
@@ -54,17 +55,10 @@ export default function ProductDetail() {
           <ProductList show={{ title: true, price: true, description:true }} id={productId} style={"product-container-white"} />
 
        
-            <div className="ButtonsProductsDetail">
-              
-              {/* <CartModal/> */}
-              <div className="buttonsContainerProduct">
-              <Button style="yellowButton" text="Contact" arrow={false} />
-              <Button style="blueButton" text="Buy" arrow={false} />
-              </div>
-              
-
-              
-            </div>
+            
+              <ContactModal />
+            <CartModal author={"Nombre Apellido"} title={"Nombre de la pintura"} category="Modernismo" price={"900"} />
+           
             <h3>DETAILS</h3>
             <ProductList show={properties} id={productId} style={"product-container"} />
             <SpecialInfoCard artwork="Original artwork" 
