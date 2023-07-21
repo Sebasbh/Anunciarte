@@ -1,5 +1,5 @@
 import "./mobileNavbar.css"
-import logoA from "./../../assets/anunciarteLogo03.png";
+import logoA from "../../assets/anunciarteLogo03.png";
 import { Icon } from "@iconify/react";
 
 export default function MobileNavbar() {

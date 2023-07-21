@@ -1,5 +1,5 @@
 import "./error.css";
-import errorImage from "./../assets/alert.png";
+import errorImage from "../assets/alert.png";
 
 export default function Error() {
   return (

@@ -1,7 +1,7 @@
 import Button from "../Components/atoms/Button";
 import "./home.css";
-import HomeImage from "./../assets/home_img.png";
-import Logo from "./../assets/anunciarteLogo02.png";
+import HomeImage from "../assets/home_img.png";
+import Logo from "../assets/anunciarteLogo02.png";
 
 export default function Home() {
   return (

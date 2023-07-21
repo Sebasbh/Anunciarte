@@ -2,8 +2,8 @@ import ContactModal from "../Components/atoms/PopUpContact";
 import CartModal from "../Components/atoms/PopUpBuy";
 import "./productDetail.css";
 import illustration from "../assets/pageIllustration.png"
-import MobileNavbar from "./../Components/molecules/MobileNavbar"
-import Navbar from "./../Components/atoms/Navbar"
+import MobileNavbar from "../Components/molecules/MobileNavbar"
+import Navbar from "../Components/atoms/Navbar"
 import ProductList from "../Components/atoms/ProductList";
 
 

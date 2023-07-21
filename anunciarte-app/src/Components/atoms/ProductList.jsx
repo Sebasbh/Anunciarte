@@ -1,53 +1,34 @@
-import "./productList.css"
 import { useEffect, useState } from 'react';
-import data from './../../../data.json'
+import { Link } from 'react-router-dom'; // Importamos el componente Link
+import './ProductList.css';
 
-
-function ProductList({show, id, style}) {
+const ProductList = () => {
   const [products, setProducts] = useState([]);
 
-  // useEffect(() => {
-  //   fetch('http://localhost:3001/products')
-  //     .then(response => response.json())
-  //     .then(data => setProducts(data))
-  //     .catch(error => console.log(error));
-  // }, []);
-
-  // useEffect(() => {
-  //   fetch('../../../data.json')
-  //     .then(response => response.json())
-  //     .then(data => setProducts(data))
-  //     .catch(error => console.log(error));
-  // }, []);
-
-  useEffect (()=>{
-    const idProduct = data.products.find(product => product._id === id);
-    setProducts(idProduct ? [idProduct] : []);
-  }, [id]);
-
+  useEffect(() => {
+    fetch('http://localhost:8000/product')
+      .then(response => response.json())
+      .then(data => setProducts(data))
+      .catch(error => console.log(error));
+  }, []);
 
   return (
-    <div>
-      {products.map((product, index) => (
-        <div key={index} className={style}>
-          {show.title && <h2>{product.title}</h2>}
-          {show.price && <p>Price: ${product.price}</p>}
-          {show.image && <img src={show.image} alt={product.title} />}
-          {show.description && <p>{product.description}</p>}
-          {show.email && <p>Email: {product.email}</p>}
-          {show.category && <p>Categories: {product.category}</p>}
-          {show.year && <p>Year: {product.year}</p>}
-          {show.size && <p>Size: {product.size}</p>}
-          {show.readyToHang && <p>Ready to Hang: {product.readyToHang ? 'Yes' : 'No'}</p>}
-          {show.frame && <p>Frame: {product.frame ? 'Yes' : 'No'}</p>}
-          {show.signed && <p>Signed: {product.signed ? 'Yes' : 'No'}</p>}
-          {show.materials && <p>Materials: {product.materials}</p>}
-          {show.shipping && <p>Shipping: {product.shipping ? 'Yes' : 'No'}</p>}
-        </div>
-      ))}
+    <div className="container">
+      <div className="card-container">
+        {products.map((product, index) => (
+          <Link key={index} to={`/detail/${product.id}`} className="card-link">
+            <div className="card">
+              <img src={`/Images/${product.image}`} className="card-image" alt={product.title} />
+              <div className="card-content">
+                <h2 className="card-title">{product.title}</h2>
+                <p className="card-price">{product.price}</p>
+              </div>
+            </div>
+          </Link>
+        ))}
+      </div>
     </div>
   );
-}
+};
 
 export default ProductList;
-

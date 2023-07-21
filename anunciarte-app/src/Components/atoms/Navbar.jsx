@@ -1,5 +1,5 @@
 import "./navbar.css"
-import Logo from "./../../assets/anunciarteLogo03.png"
+import Logo from "../../assets/anunciarteLogo03.png"
 
 
 export default function Navbar() {
