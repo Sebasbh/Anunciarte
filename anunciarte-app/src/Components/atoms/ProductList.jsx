@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom'; // Importamos el componente Link
+import { Link } from 'react-router-dom';
 import './ProductList.css';
 
 const ProductList = () => {
@@ -15,8 +15,8 @@ const ProductList = () => {
   return (
     <div className="container">
       <div className="card-container">
-        {products.map((product, index) => (
-          <Link key={index} to={`/detail/${product.id}`} className="card-link">
+        {products.map((product) => (
+          <Link key={product.id} to={`/detail/${product._id}`} className="card-link">
             <div className="card">
               <img src={`/Images/${product.image}`} className="card-image" alt={product.title} />
               <div className="card-content">
