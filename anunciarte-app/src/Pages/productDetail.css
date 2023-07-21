@@ -1,34 +1,48 @@
-.ProductDetail {
-  min-height: 100vh;
-  background-color: #E89ABF;
-  padding: 2rem;
+/* ProductDetail component styles */
+
+/* Colors */
+:root {
+  --primary-color: #e89abf;
+  --secondary-color: #fff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --text-color: #888;
 }
 
-.mainContainerProduct {
+.ProductDetail {
+  min-height: 100vh;
+  background-color: var(--primary-color);
+
+  box-sizing: border-box;
+}
+
+.productDetailContainer {
+  margin-top: 80px;
+  margin-right: 30px;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
   gap: 2rem;
 }
 
 .galleryContainer {
+  height: 500px;
+  width: 500px;
   flex: 1;
 }
 
 .productImage {
-  width: 100%;
-  max-height: 400px;
-  object-fit: cover;
+  max-width:100%;
+  max-height: 100%;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px var(--shadow-color);
 }
 
 .infoContainer {
   flex: 1;
-  background-color: #fff;
+  background-color: var(--secondary-color);
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px var(--shadow-color);
+  box-sizing: border-box;
 }
 
 .productInfo {
@@ -36,30 +50,58 @@
 }
 
 .productInfo h2 {
-  font-size: 1.8rem;
+  font-size: 2rem; /* Increase the font size for the product title */
   margin-bottom: 0.5rem;
+  color: var(--primary-color); /* Set the title color to the primary color */
 }
 
 .price {
   font-weight: bold;
+  color: var(--primary-color); /* Set the price color to the primary color */
 }
 
 .buttonsContainer {
   display: flex;
   gap: 1rem;
+  margin-top: 1.5rem; /* Slightly increase the margin for better spacing */
+}
+
+.buttonsContainer button {
+  /* Style your buttons here */
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.buttonsContainer button:nth-child(1) {
+  background-color: var(--primary-color); /* Use the primary color for the "Add to Cart" button */
+}
+
+.buttonsContainer button:nth-child(2) {
+  background-color: #4CAF50; /* Use a green color for the "Buy Now" button */
 }
 
 .productDetails {
   margin-top: 2rem;
 }
 
+.productDetails h3 {
+  font-size: 1.5rem; /* Slightly increase the font size for the product details section title */
+  margin-bottom: 1rem;
+  color: var(--primary-color); /* Set the title color to the primary color */
+}
+
 .productDetails p {
   margin-bottom: 0.5rem;
+  line-height: 1.6;
 }
 
 .categories {
   font-style: italic;
-  color: #888;
+  color: var(--text-color);
 }
 
 .description {
@@ -71,8 +113,9 @@
   font-style: italic;
 }
 
+/* Responsive styles */
 @media screen and (max-width: 768px) {
-  .mainContainerProduct {
+  .productDetailContainer {
     flex-direction: column;
     align-items: center;
   }
@@ -80,6 +123,22 @@
   .infoContainer {
     margin-top: 2rem;
   }
+
+  .productImage {
+    max-height: 300px;
+  }
+
+  .productDetails h3 {
+    font-size: 1.2rem;
+  }
+
+  .buttonsContainer {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .buttonsContainer button {
+    width: 100%; /* Make buttons take full width on smaller screens */
+  }
 }
-
-

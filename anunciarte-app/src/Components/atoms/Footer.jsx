@@ -4,10 +4,19 @@ import "./footer.css";
 export default function Footer() {
   return (
     <div className="footerContainer">
-        <Icon icon="ic:round-home" color="white" />
-        <Icon icon="material-symbols:favorite-outline" color="white" />
-        <Icon icon="carbon:notification" color="white" />
-        <Icon icon="icon-park-outline:buy" color="white" />
+      <div className="socialIcons">
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <Icon icon="brandico:facebook" />
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <Icon icon="brandico:twitter" />
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <Icon icon="brandico:instagram" />
+        </a>
+      </div>
+      <p className="footerText">© 2023 Anunciarte. All rights reserved.</p>
     </div>
-  )
+  );
 }
+

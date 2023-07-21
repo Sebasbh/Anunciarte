@@ -1,46 +1,146 @@
 /* navbar.css */
 
 .navbar {
-    background-color: #1D5AD5;
-    padding: 15px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
+  background-color: #1d5ad5;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+  margin-left: 0;
+}
+
+.navbar-icons {
+  display: flex;
+  gap: 2rem; /* Increase the gap between icons */
+}
+
+.navbar-icons a {
+  color: #fff;
+  font-size: 2rem; /* Increase the icon size */
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.navbar-icons a:hover {
+  color: #f4f4f4;
+}
+
+/* Add a style for the active icon (if applicable) */
+.navbar-icons a.active {
+  color: #b627f8;
+}
+
+/* Search Bar styles */
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  border: 2px solid #fff;
+  border-radius: 20px;
+  background-color: transparent;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.search-bar input::placeholder {
+  color: #fff;
+  opacity: 0.7;
+}
+
+.search-bar input:focus {
+  border-color: #f8b627;
+}
+
+.search-bar button {
+  margin-left: 10px;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.search-bar button:hover {
+  background-color: #e6a503;
+}
+
+.custom-modal {
   
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  top: 20%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 1000;
+  max-width: 300px;
+  width: 100%;
+}
+
+
+
+.close-button {
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #555;
+}
+
+
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 15px;
+  }
+
   .logo {
-    width: 50px;
-    height: auto;
+    width: 60px;
   }
-  
-  .menu {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
+
+  .navbar-icons {
+    gap: 1.5rem;
   }
-  
-  .menu li {
-    padding: 8px 15px;
+
+  .navbar-icons a {
+    font-size: 1.8rem;
   }
-  
-  .menu li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s;
+
+  /* Responsive styles for the Search Bar */
+  .search-bar {
+    flex: 1;
+    justify-content: flex-end;
   }
-  
-  .menu li a:hover {
-    color: #FED200;
+
+  .search-bar input {
+    width: 100%;
   }
-  
-  
-  @media screen and (max-width: 400px) {
-    .navbar {
-      display: none;
-    }
+
+  .search-bar button {
+    margin-left: 0;
   }
-  
+}
